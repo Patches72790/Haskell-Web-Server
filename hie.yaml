@@ -1,0 +1,16 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "happstack-project:lib"
+
+    - path: "./app/Main.hs"
+      component: "happstack-project:exe:happstack-project-exe"
+
+    - path: "./app/Paths_happstack_project.hs"
+      component: "happstack-project:exe:happstack-project-exe"
+
+    - path: "./test"
+      component: "happstack-project:test:happstack-project-test"
+
+    - path: "happstack-lite/./"
+      component: "happstack-lite:lib"
