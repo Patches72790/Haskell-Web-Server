@@ -42,10 +42,7 @@ template title body = toResponse $
       body
       p $ a ! href "/" $ "back home"
 
---echoHandler :: ServerPart Response
---echoHandler =
-
-config = ServerConfig {port = 8080, ramQuota = (2 ^ 32), diskQuota = 2 ^ 32, tmpDir = "./.tmp"}
+config = ServerConfig {port = 8080, ramQuota = 2 ^ 16, diskQuota = 2 ^ 16, tmpDir = "./.tmp"}
 
 run :: IO ()
 run = serve (Just config) myApp
